@@ -13,3 +13,8 @@ source config/color.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck
+
+if !has('vim_starting')
+  " Call on_source hook when reloading .vimrc.
+  call neobundle#call_hook('on_source')
+endif

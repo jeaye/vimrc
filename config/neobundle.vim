@@ -14,6 +14,3 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 call neobundle#end()
 
 filetype plugin indent on
-
-" Prompt to install missing bundles
-NeoBundleCheck

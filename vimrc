@@ -10,6 +10,7 @@ source config/neobundle.vim
 source config/color.vim
 source config/ui.vim
 source config/indent.vim
+source config/save.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

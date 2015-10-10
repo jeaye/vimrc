@@ -59,3 +59,6 @@ set encoding=utf-8
 
 " Idle time before CursorHold is sent
 set updatetime=1000
+
+" 80 column
+let &colorcolumn="81,81"

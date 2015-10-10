@@ -43,8 +43,19 @@ set guioptions-=l " Left scroll
 set guioptions-=L " Left scroll
 set guioptions+=c " Use console to prompt questions
 
+" Show line numbers and the current mode
+set number
+set showmode
+
 " Folding
 set foldmethod=syntax
 set foldenable
 set foldcolumn=0
 set foldlevelstart=20
+
+" UTF8 please
+set fileencoding=utf-8
+set encoding=utf-8
+
+" Idle time before CursorHold is sent
+set updatetime=1000

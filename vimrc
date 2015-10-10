@@ -9,3 +9,7 @@ set ttyfast
 " Unite?
 
 source config/neobundle.vim
+source config/color.vim
+
+" Prompt to install missing bundles
+NeoBundleCheck

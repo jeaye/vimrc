@@ -42,3 +42,9 @@ set guioptions-=R " Right scroll
 set guioptions-=l " Left scroll
 set guioptions-=L " Left scroll
 set guioptions+=c " Use console to prompt questions
+
+" Folding
+set foldmethod=syntax
+set foldenable
+set foldcolumn=0
+set foldlevelstart=20

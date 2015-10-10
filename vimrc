@@ -12,6 +12,7 @@ source config/ui.vim
 source config/indent.vim
 source config/save.vim
 source config/airline.vim
+source config/search.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

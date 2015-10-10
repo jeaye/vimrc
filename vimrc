@@ -9,6 +9,7 @@ set nomodeline
 source config/neobundle.vim
 source config/color.vim
 source config/ui.vim
+source config/indent.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

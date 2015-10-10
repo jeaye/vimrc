@@ -8,6 +8,12 @@ nnoremap <C-h> :tabp<CR>
 nnoremap <silent> <C-j> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <C-k> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
+" Allow tab duplication
+function! s:copy_tab()
+  tabnew %:p
+endfunction!
+nnoremap ,T <Esc>:call <SID>copy_tab()<CR>
+
 " No visual bell
 set noerrorbells
 set visualbell t_vb=

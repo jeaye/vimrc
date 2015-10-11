@@ -20,6 +20,7 @@ source $HOME/.vim/config/git.vim
 source $HOME/.vim/config/mutt.vim
 source $HOME/.vim/config/lisp.vim
 source $HOME/.vim/config/buffer.vim
+source $HOME/.vim/config/c++.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

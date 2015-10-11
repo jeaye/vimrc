@@ -4,6 +4,7 @@ call neobundle#append()
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'triglav/vim-visual-increment'
   NeoBundle 'matchit.zip'
+  NeoBundle 'repeat.vim'
 call neobundle#end()
 
 " Number formats, for incrementing

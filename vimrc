@@ -17,7 +17,6 @@ source $HOME/.vim/config/search.vim
 source $HOME/.vim/config/motion.vim
 source $HOME/.vim/config/completion.vim
 source $HOME/.vim/config/git.vim
-source $HOME/.vim/config/spell.vim
 source $HOME/.vim/config/mutt.vim
 source $HOME/.vim/config/lisp.vim
 

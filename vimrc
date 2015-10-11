@@ -6,14 +6,14 @@ set nomodeline
 " TODO
 " Unite?
 
-source config/neobundle.vim
-source config/color.vim
-source config/ui.vim
-source config/indent.vim
-source config/save.vim
-source config/airline.vim
-source config/search.vim
-source config/motion.vim
+source $HOME/.vim/config/neobundle.vim
+source $HOME/.vim/config/color.vim
+source $HOME/.vim/config/ui.vim
+source $HOME/.vim/config/indent.vim
+source $HOME/.vim/config/save.vim
+source $HOME/.vim/config/airline.vim
+source $HOME/.vim/config/search.vim
+source $HOME/.vim/config/motion.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck
@@ -24,4 +24,3 @@ if !has('vim_starting')
 endif
 
 filetype plugin indent on
-syntax on

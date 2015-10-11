@@ -68,3 +68,8 @@ set updatetime=1000
 
 " 80 column
 let &colorcolumn="81,81"
+
+" Enter in the quickfix window doesn't focus the new buffer.
+" This is convenient for quickly looking at code and following the
+" quickfix buffer without having to manually switch back.
+au BufReadPost quickfix noremap <C-cr> <cr><c-w>p

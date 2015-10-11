@@ -34,7 +34,7 @@ command! Wa wa
 command! Wq wq
 
 " Make the proper directories when writing a file
-function s:MkNonExDir(file, buf)
+function! s:MkNonExDir(file, buf)
   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
     let dir=fnamemodify(a:file, ':h')
     if !isdirectory(dir)

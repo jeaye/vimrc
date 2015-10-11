@@ -21,3 +21,6 @@ if !has('vim_starting')
   " Call on_source hook when reloading .vimrc.
   call neobundle#call_hook('on_source')
 endif
+
+filetype plugin indent on
+syntax on

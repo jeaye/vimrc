@@ -14,6 +14,7 @@ source $HOME/.vim/config/save.vim
 source $HOME/.vim/config/airline.vim
 source $HOME/.vim/config/search.vim
 source $HOME/.vim/config/motion.vim
+source $HOME/.vim/config/completion.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

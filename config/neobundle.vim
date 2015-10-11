@@ -12,3 +12,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   \    },
   \ }
 call neobundle#end()
+
+" Give big plugins a while to install
+let g:neobundle#install_process_timeout = 1500

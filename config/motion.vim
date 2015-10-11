@@ -1,5 +1,6 @@
 call neobundle#append()
   NeoBundle 'easymotion/vim-easymotion'
+  NeoBundle 'camelcasemotion'
 call neobundle#end()
 
 " Number formats, for incrementing

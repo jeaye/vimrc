@@ -4,11 +4,11 @@ syntax on
 call neobundle#append()
   NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'jeaye/color_coded', {
-      \ 'build': {
-      \   'unix': 'cmake . && make && make install',
-      \ },
-      \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
-      \ 'build_commands' : ['cmake', 'make']
+    \ 'build': {
+    \   'unix': 'cmake . && make && make install',
+    \ },
+    \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
+    \ 'build_commands' : ['cmake', 'make']
   \}
   NeoBundle 'luochen1990/rainbow'
 call neobundle#end()

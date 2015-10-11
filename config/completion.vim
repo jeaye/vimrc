@@ -1,9 +1,9 @@
 call neobundle#append()
   NeoBundle 'Valloric/YouCompleteMe', {
-  \ 'build'      : {
-     \ 'mac'     : './install.py --clang-completer --omnisharp-completer',
-     \ 'unix'    : './install.py --clang-completer --omnisharp-completer',
-     \ }
+    \ 'build' : {
+      \ 'mac' : './install.py --clang-completer --omnisharp-completer',
+      \ 'unix' : './install.py --clang-completer --omnisharp-completer',
+    \ }
   \ }
 call neobundle#end()
 

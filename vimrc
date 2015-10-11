@@ -5,6 +5,7 @@ set nomodeline
 
 " TODO
 " Unite?
+" committia doesn't work lazily
 
 source $HOME/.vim/config/neobundle.vim
 source $HOME/.vim/config/color.vim
@@ -15,6 +16,7 @@ source $HOME/.vim/config/airline.vim
 source $HOME/.vim/config/search.vim
 source $HOME/.vim/config/motion.vim
 source $HOME/.vim/config/completion.vim
+source $HOME/.vim/config/git.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

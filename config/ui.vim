@@ -60,8 +60,10 @@ set foldcolumn=0
 set foldlevelstart=20
 
 " UTF8 please
-set fileencoding=utf-8
-set encoding=utf-8
+if has('vim_starting')
+  set fileencoding=utf-8
+  set encoding=utf-8
+endif
 
 " Idle time before CursorHold is sent
 set updatetime=1000
@@ -73,3 +75,8 @@ let &colorcolumn="81,81"
 " This is convenient for quickly looking at code and following the
 " quickfix buffer without having to manually switch back.
 au BufReadPost quickfix noremap <C-cr> <cr><c-w>p
+
+if has('nvim')
+  " Allow escaping terminal mode with ESC
+  :tnoremap <Esc> <C-\><C-n>
+endif

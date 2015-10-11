@@ -3,6 +3,7 @@ call neobundle#append()
   NeoBundle 'tpope/vim-unimpaired'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'triglav/vim-visual-increment'
+  NeoBundle 'matchit.zip'
 call neobundle#end()
 
 " Number formats, for incrementing

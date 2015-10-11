@@ -7,9 +7,10 @@ call neobundle#append()
     \ 'build': {
     \   'unix': 'cmake . && make && make install',
     \ },
-    \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
-    \ 'build_commands' : ['cmake', 'make']
-  \}
+    \ 'autoload': { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
+    \ 'build_commands': ['cmake', 'make'],
+    \ 'disabled': has('nvim'),
+  \ }
   NeoBundle 'luochen1990/rainbow'
 call neobundle#end()
 

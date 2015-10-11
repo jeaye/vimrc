@@ -17,6 +17,7 @@ source $HOME/.vim/config/search.vim
 source $HOME/.vim/config/motion.vim
 source $HOME/.vim/config/completion.vim
 source $HOME/.vim/config/git.vim
+source $HOME/.vim/config/spell.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

@@ -1,5 +1,6 @@
 call neobundle#append()
   NeoBundle 'indenthtml.vim'
+  NeoBundle 'ntpeters/vim-better-whitespace'
 call neobundle#end()
 
 set autoindent smartindent

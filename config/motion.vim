@@ -1,6 +1,9 @@
 call neobundle#append()
   NeoBundle 'easymotion/vim-easymotion'
   NeoBundle 'camelcasemotion'
+  NeoBundle 'tpope/vim-unimpaired'
+  NeoBundle 'tpope/vim-surround'
+  NeoBundle 'triglav/vim-visual-increment'
 call neobundle#end()
 
 " Number formats, for incrementing

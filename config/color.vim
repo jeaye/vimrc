@@ -10,6 +10,7 @@ call neobundle#append()
       \ 'autoload' : { 'filetypes' : ['c', 'cpp', 'objc', 'objcpp'] },
       \ 'build_commands' : ['cmake', 'make']
   \}
+  NeoBundle 'luochen1990/rainbow'
 call neobundle#end()
 
 set background=dark
@@ -22,3 +23,31 @@ hi Conceal guifg=green ctermfg=green
 if &diff
   let g:color_coded_enabled = 0
 endif
+
+" Rainbow operators
+let g:rainbow_active = 1
+let g:rainbow_conf =
+\ {
+\  'guifgs': ['darkorange3', 'seagreen3', 'firebrick', 'darkorchid3', 'forestgreen', 'tomato'],
+\  'ctermfgs': ['darkgreen', 'darkmagenta', 'lightgreen', 'lightred'],
+\  'operators': '_[\,\+\*\-\&\^\!\.\:\<\>\;\=\|\?]_',
+\  'parentheses':
+\  [
+\    'start=/(/ end=/)/ fold',
+\    'start=/\[/ end=/\]/ fold',
+\    'start=/{/ end=/}/ fold'
+\  ],
+\  'separately':
+\  {
+\    'jank':
+\    {
+\      'parentheses':
+\      [
+\        'start=/(\ze[^;]/ end=/)/ fold',
+\        'start=/\[/ end=/\]/ fold',
+\        'start=/{/ end=/}/ fold'
+\      ],
+\    }
+\  }
+\}
+

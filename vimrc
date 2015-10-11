@@ -4,7 +4,6 @@ set nocompatible
 set nomodeline
 
 " TODO
-" Unite?
 " committia doesn't work lazily
 
 source $HOME/.vim/config/neobundle.vim

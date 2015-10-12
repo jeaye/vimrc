@@ -3,9 +3,6 @@ set nocompatible
 " Don't check for vim modelines at the end of files
 set nomodeline
 
-" TODO
-" committia doesn't work lazily
-
 source $HOME/.vim/config/neobundle.vim
 source $HOME/.vim/config/color.vim
 source $HOME/.vim/config/ui.vim

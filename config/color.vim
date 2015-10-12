@@ -3,7 +3,7 @@ syntax on
 
 call neobundle#append()
   NeoBundle 'altercation/vim-colors-solarized'
-  NeoBundle 'jeaye/color_coded', {
+  NeoBundleLazy 'jeaye/color_coded', {
     \ 'build': {
     \   'unix': 'cmake . && make && make install',
     \ },

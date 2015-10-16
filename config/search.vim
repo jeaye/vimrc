@@ -1,5 +1,5 @@
 call neobundle#append()
-  NeoBundle 'kien/ctrlp.vim'
+  NeoBundle 'ctrlpvim/ctrlp.vim'
 call neobundle#end()
 
 " No highlights after searches

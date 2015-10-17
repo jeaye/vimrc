@@ -1,7 +1,5 @@
 " No vi compatibility
 set nocompatible
-" Don't check for vim modelines at the end of files
-set nomodeline
 
 source $HOME/.vim/config/debug.vim
 source $HOME/.vim/config/neobundle.vim

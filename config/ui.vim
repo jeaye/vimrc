@@ -49,9 +49,10 @@ set guioptions-=l " Left scroll
 set guioptions-=L " Left scroll
 set guioptions+=c " Use console to prompt questions
 
-" Show line numbers and the current mode
+" Show line numbers
 set number
-set showmode
+" Don't show the current mode - it's already displayed by airline
+set noshowmode
 
 " Folding
 set foldmethod=syntax

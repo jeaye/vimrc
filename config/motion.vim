@@ -13,9 +13,6 @@ set nrformats=octal,hex
 " Go to file in a new tab
 nnoremap gF <C-W>gF
 
-" Merging upward
-nnoremap K kJ
-
 " Delete lines without adding them to the yank stack
 nnoremap ,d "_d
 vnoremap ,d "_d

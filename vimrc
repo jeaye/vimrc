@@ -18,6 +18,7 @@ source $HOME/.vim/config/clojure.vim
 source $HOME/.vim/config/buffer.vim
 source $HOME/.vim/config/c++.vim
 source $HOME/.vim/config/jank.vim
+source $HOME/.vim/config/markdown.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

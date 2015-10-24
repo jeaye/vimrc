@@ -18,3 +18,9 @@ nnoremap ,d "_d
 vnoremap ,d "_d
 
 nnoremap Y y$
+
+" Move based on display lines
+noremap <buffer> <silent> k gk
+noremap <buffer> <silent> j gj
+noremap <buffer> <silent> 0 g0
+noremap <buffer> <silent> $ g$

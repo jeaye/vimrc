@@ -1,6 +1,13 @@
 " No vi compatibility
 set nocompatible
 
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == 'nixos'
+  let g:nixos = 1
+else
+  let g:nixos = 0
+endif
+
 source $HOME/.vim/config/debug.vim
 source $HOME/.vim/config/neobundle.vim
 source $HOME/.vim/config/color.vim
@@ -19,6 +26,7 @@ source $HOME/.vim/config/buffer.vim
 source $HOME/.vim/config/c++.vim
 source $HOME/.vim/config/jank.vim
 source $HOME/.vim/config/markdown.vim
+source $HOME/.vim/config/nix.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

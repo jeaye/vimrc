@@ -4,7 +4,6 @@ call neobundle#append()
       \ 'mac': './install.py --clang-completer --omnisharp-completer',
       \ 'unix': './install.py --clang-completer --omnisharp-completer',
     \ },
-    \ 'disabled': g:nixos,
   \ }
 call neobundle#end()
 

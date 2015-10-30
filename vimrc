@@ -1,13 +1,6 @@
 " No vi compatibility
 set nocompatible
 
-let hostname = substitute(system('hostname'), '\n', '', '')
-if hostname == 'nixos'
-  let g:nixos = 1
-else
-  let g:nixos = 0
-endif
-
 source $HOME/.vim/config/debug.vim
 source $HOME/.vim/config/neobundle.vim
 source $HOME/.vim/config/color.vim

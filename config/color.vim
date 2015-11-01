@@ -29,8 +29,8 @@ endif
 let g:rainbow_active = 1
 let g:rainbow_conf =
 \ {
-\  'guifgs': ['darkorange3', 'seagreen3', 'firebrick', 'darkorchid3', 'forestgreen', 'tomato'],
-\  'ctermfgs': ['darkgreen', 'darkmagenta', 'lightgreen', 'lightred'],
+\  'guifgs': ['darkorange3', 'seagreen3', 'deepskyblue', 'darkorchid3', 'forestgreen', 'lightblue', 'hotpink', 'mistyrose1'],
+\  'ctermfgs': ['darkgreen', 'cyan', 'lightgreen', 'lightred'],
 \  'operators': '_[\,\+\*\-\&\^\!\.\:\<\>\;\=\|\?]_',
 \  'parentheses':
 \  [

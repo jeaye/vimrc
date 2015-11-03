@@ -35,7 +35,7 @@ nnoremap <right> <nop>
 " Font
 let os = substitute(system('uname'), "\n", "", "")
 if os != "Darwin"
-  set guifont=Monospace\ 18
+  set guifont=Monospace\ 16
 else
   set guifont=Menlo\ Regular:h20
 endif

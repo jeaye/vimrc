@@ -5,6 +5,7 @@ call neobundle#append()
       \ 'unix': './install.py --clang-completer --omnisharp-completer',
     \ },
   \ }
+  NeoBundle 'rdnetto/YCM-Generator'
 call neobundle#end()
 
 " YCM

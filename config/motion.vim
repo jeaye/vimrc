@@ -2,9 +2,9 @@ call neobundle#append()
   NeoBundle 'camelcasemotion'
   NeoBundle 'tpope/vim-unimpaired'
   NeoBundle 'tpope/vim-surround'
+  NeoBundle 'tpope/vim-repeat'
   NeoBundle 'triglav/vim-visual-increment'
   NeoBundle 'matchit.zip'
-  NeoBundle 'repeat.vim'
 call neobundle#end()
 
 " Number formats, for incrementing

@@ -48,7 +48,8 @@ let g:rainbow_conf =
 \        'start=/\[/ end=/\]/ fold',
 \        'start=/{/ end=/}/ fold'
 \      ],
-\    }
+\    },
+\    'clojure': 0,
 \  }
 \}
 

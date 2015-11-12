@@ -5,8 +5,6 @@ call neobundle#append()
   NeoBundle 'tpope/vim-projectionist'
   NeoBundle 'tpope/vim-dispatch'
   NeoBundle 'tpope/vim-fireplace'
-  NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
-  NeoBundle 'guns/vim-sexp'
   NeoBundle 'guns/vim-clojure-highlight'
   NeoBundle 'guns/vim-clojure-static'
 call neobundle#end()

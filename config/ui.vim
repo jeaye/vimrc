@@ -1,12 +1,21 @@
 " Improves speed of drawing and smoothness of scrolling
 set ttyfast
 
+" Show incomplete commands as I type
+set showcmd
+
+" Show command completion with tab
+set wildmenu
+
 " GUI tabs
 nnoremap ,t <Esc>:tabnew<CR>
 nnoremap <C-l> :tabn<CR>
 nnoremap <C-h> :tabp<CR>
 nnoremap <silent> <C-j> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <C-k> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+" Allow a lot of tabs to be opened by -p
+set tabpagemax=50
 
 " Allow tab duplication
 function! s:copy_tab()

@@ -17,3 +17,4 @@ let g:ctrlp_working_path_mode = 'r'
 " Ignore certain patterns while searching
 set wildignore+=target,out,build_debug,build_release,lib,build
 set wildignore+=Library,*.csproject,*.meta
+set wildignore+=_site,vendor

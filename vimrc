@@ -20,6 +20,7 @@ source $HOME/.vim/config/c++.vim
 source $HOME/.vim/config/jank.vim
 source $HOME/.vim/config/markdown.vim
 source $HOME/.vim/config/nix.vim
+source $HOME/.vim/config/org.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

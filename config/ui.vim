@@ -90,3 +90,7 @@ if has('nvim')
   " Allow escaping terminal mode with ESC
   :tnoremap <Esc> <C-\><C-n>
 endif
+
+" Open help in a new tab
+cabbrev help tab help
+cabbrev h tab h

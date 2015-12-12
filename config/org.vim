@@ -1,4 +1,3 @@
 call neobundle#append()
-  NeoBundle 'jceb/vim-orgmode', {'depends': 'tpope/vim-speeddating'}
-  NeoBundle 'blindFS/vim-taskwarrior'
+  NeoBundle 'jceb/vim-orgmode'
 call neobundle#end()

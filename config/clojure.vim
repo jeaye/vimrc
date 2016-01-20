@@ -16,6 +16,5 @@ let g:clojure_align_multiline_strings = 1
 
 " Evaluate Clojure buffers on load
 autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
-autocmd BufWrite *.clj ClojureHighlightReferences
 
 nnoremap cq% :%Eval<CR>

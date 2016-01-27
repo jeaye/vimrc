@@ -1,11 +1,9 @@
 call neobundle#append()
   " Lazy load these based on filetype
-  NeoBundle 'tpope/vim-classpath'
-  NeoBundle 'tpope/vim-salve'
-  NeoBundle 'tpope/vim-projectionist'
-  NeoBundle 'tpope/vim-dispatch'
-  NeoBundle 'tpope/vim-fireplace'
-  NeoBundle 'guns/vim-clojure-static'
+  "NeoBundle 'tpope/vim-classpath'
+  "NeoBundle 'tpope/vim-salve'
+  "NeoBundle 'tpope/vim-dispatch'
+  "NeoBundle 'tpope/vim-fireplace'
 call neobundle#end()
 
 " How many lines to consider for indentation correctness; it's large
@@ -15,6 +13,6 @@ let g:clojure_maxlines = 10000
 let g:clojure_align_multiline_strings = 1
 
 " Evaluate Clojure buffers on load
-autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+"autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 
 nnoremap cq% :%Eval<CR>

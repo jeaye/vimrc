@@ -17,5 +17,6 @@ let g:clojure_align_multiline_strings = 1
 
 " Boot support
 autocmd BufNewFile,BufRead *.boot setfiletype clojure
+autocmd BufNewFile,BufRead *.edn setfiletype clojure
 
 nnoremap cq% :%Eval<CR>

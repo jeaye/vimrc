@@ -52,4 +52,3 @@ let g:rainbow_conf =
 \    'clojure': 0,
 \  }
 \}
-

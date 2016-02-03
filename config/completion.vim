@@ -2,7 +2,7 @@ call neobundle#append()
   NeoBundle 'Valloric/YouCompleteMe', {
     \ 'build': {
       \ 'mac': './install.py --clang-completer --omnisharp-completer',
-      \ 'unix': './install.py --clang-completer --omnisharp-completer',
+      \ 'unix': 'python2 ./install.py --clang-completer --omnisharp-completer',
     \ },
   \ }
   NeoBundle 'rdnetto/YCM-Generator'

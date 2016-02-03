@@ -6,7 +6,7 @@ call neobundle#end()
 " Always show a helpful statusline
 set laststatus=2
 let g:airline_section_warning=''
-let g:airline_theme='solarized'
+let g:airline_theme='lucius'
 let g:airline_exclude_preview=1
 let g:airline_left_sep=''
 let g:airline_right_sep=''

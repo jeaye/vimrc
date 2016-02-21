@@ -46,7 +46,7 @@ let os = substitute(system('uname'), "\n", "", "")
 if os != "Darwin"
   set guifont=Monospace\ 17
 else
-  set guifont=Menlo\ Regular:h20
+  set guifont=Menlo\ Regular:h25
 endif
 
 " GUI menus

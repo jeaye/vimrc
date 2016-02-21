@@ -1,6 +1,8 @@
 " No vi compatibility
 set nocompatible
 
+" TODO: Bring in vim-taskwarrior
+
 source $HOME/.vim/config/debug.vim
 source $HOME/.vim/config/neobundle.vim
 source $HOME/.vim/config/color.vim
@@ -20,7 +22,6 @@ source $HOME/.vim/config/c++.vim
 source $HOME/.vim/config/jank.vim
 source $HOME/.vim/config/markdown.vim
 source $HOME/.vim/config/nix.vim
-source $HOME/.vim/config/org.vim
 
 " Prompt to install missing bundles
 NeoBundleCheck

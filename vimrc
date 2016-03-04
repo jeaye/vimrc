@@ -24,6 +24,7 @@ source $HOME/.vim/config/buffer.vim
 
 if !g:lightweight
   source $HOME/.vim/config/completion.vim
+  source $HOME/.vim/config/color_coded.vim
   source $HOME/.vim/config/lisp.vim
   source $HOME/.vim/config/clojure.vim
   source $HOME/.vim/config/c++.vim

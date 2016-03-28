@@ -27,6 +27,7 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
+" TODO: Don't reset cursor for diff mode
 
 " Allow saving as root
 command! W w !sudo tee % > /dev/null

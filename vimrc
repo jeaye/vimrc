@@ -3,8 +3,8 @@ set nocompatible
 
 " TODO: Bring in vim-taskwarrior
 
-let hostname = substitute(system('hostname'), "\n", "", "")
-let g:lightweight = hostname == "nixums"
+let g:hostname = substitute(system('hostname'), "\n", "", "")
+let g:lightweight = g:hostname == "nixums"
 
 source $HOME/.vim/config/debug.vim
 source $HOME/.vim/config/neobundle.vim

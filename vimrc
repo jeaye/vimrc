@@ -28,6 +28,7 @@ if !g:lightweight
   source $HOME/.vim/config/lisp.vim
   source $HOME/.vim/config/clojure.vim
   source $HOME/.vim/config/c++.vim
+  source $HOME/.vim/config/shell.vim
 endif
 
 " Prompt to install missing bundles

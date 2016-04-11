@@ -20,3 +20,5 @@ autocmd BufNewFile,BufRead *.boot setfiletype clojure
 autocmd BufNewFile,BufRead *.edn setfiletype clojure
 
 nnoremap cq% :%Eval<CR>
+
+command! Arcadia VimShellInteractive ruby Assets/Arcadia/Editor/repl-client.rb

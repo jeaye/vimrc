@@ -1,3 +1,10 @@
+call neobundle#append()
+  NeoBundle 'derekwyatt/vim-fswitch'
+call neobundle#end()
+
+nmap <silent> <c-z> :FSHere<cr>
+let fsnonewfiles="on"
+
 " C++11 uniform initialization
 let c_no_curly_error=1
 

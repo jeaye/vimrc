@@ -1,38 +1,33 @@
-" Install NeoBundle, if it doesn't exist
-" Credit: https://github.com/tony/vim-config
-"let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
-"if !filereadable(neobundle_readme)
-"  echo "Installing neobundle.vim"
-"  echo ""
-"  silent !mkdir -p ~/.vim/bundle
-"  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-"endif
+let s:dein_dir = expand('~/.vim/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-  "set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    exe '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  exe 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-"call neobundle#begin(expand('~/.vim/bundle/'))
-"  NeoBundleFetch 'Shougo/neobundle.vim'
-"call neobundle#end()
+if dein#load_state(s:dein_dir)
+  call dein#begin(expand('~/.vim/dein'))
+    call dein#add('Shougo/dein.vim')
+    call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
-" Give big plugins a while to install
-"let g:neobundle#install_process_timeout = 1500
+    let files = globpath($HOME . "/.vim/layer", "**/package.vim")
+    for f in split(files, "\n")
+      echom "Loading layer packages" f
+      exe "source" f
+    endfor
+  call dein#end()
+  call dein#save_state()
+endif
 
-call dein#begin(expand('~/.vim/dein'))
-  call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim', {
-      \ 'build': {
-      \     'mac': 'make -f make_mac.mak',
-      \     'linux': 'make',
-      \     'unix': 'gmake',
-      \    },
-      \ })
+if has('vim_starting') && dein#check_install()
+  call dein#install()
+endif
 
-  let files = globpath($HOME . "/.vim/config", "**/package.vim")
-  for f in split(files, "\n")
-    echom "Loading layer" f
-    exe "source" f
-  endfor
-call dein#end()
+"let files = globpath($HOME . "/.vim/layer", "**/config.vim")
+"for f in split(files, "\n")
+"  echom "Loading layer config" f
+"  exe "source" f
+"endfor

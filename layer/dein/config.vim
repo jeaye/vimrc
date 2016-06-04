@@ -23,6 +23,7 @@ if dein#load_state(s:dein_dir)
 endif
 
 if has('vim_starting') && dein#check_install()
+  let g:dein#install_process_timeout = 60 * 10
   call dein#install()
 endif
 

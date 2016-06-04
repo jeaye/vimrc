@@ -27,8 +27,7 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
-"let files = globpath($HOME . "/.vim/layer", "**/config.vim")
-"for f in split(files, "\n")
-"  echom "Loading layer config" f
-"  exe "source" f
-"endfor
+let files = globpath($HOME . "/.vim/layer", "**/config.vim")
+for f in split(files, "\n")
+  exe "source" f
+endfor

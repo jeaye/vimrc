@@ -9,9 +9,6 @@ call neobundle#end()
 set background=dark
 colorscheme solarized
 
-" True color in neovim
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
 " Color conceal characters nicely
 hi Conceal guifg=green ctermfg=green
 

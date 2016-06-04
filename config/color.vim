@@ -2,18 +2,9 @@
 syntax on
 
 call neobundle#append()
-  if has('nvim')
-    NeoBundle 'frankier/neovim-colors-solarized-truecolor-only'
-  else
-    NeoBundle 'altercation/vim-colors-solarized'
-  endif
+  NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'luochen1990/rainbow'
 call neobundle#end()
-
-" True color in neovim
-if has('nvim')
-  set termguicolors
-endif
 
 set background=dark
 colorscheme solarized

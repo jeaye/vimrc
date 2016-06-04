@@ -1,7 +1,3 @@
-call neobundle#append()
-  NeoBundle 'ctrlpvim/ctrlp.vim'
-call neobundle#end()
-
 " No highlights after searches
 set nohls
 " Search while typing

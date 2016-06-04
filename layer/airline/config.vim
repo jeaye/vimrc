@@ -1,8 +1,3 @@
-call neobundle#append()
-  NeoBundle 'vim-airline/vim-airline'
-  NeoBundle 'vim-airline/vim-airline-themes'
-call neobundle#end()
-
 " Always show a helpful statusline
 set laststatus=2
 let g:airline_section_warning=''

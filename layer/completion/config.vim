@@ -1,13 +1,3 @@
-call neobundle#append()
-  NeoBundle 'Valloric/YouCompleteMe', {
-    \ 'build': {
-      \ 'mac': './install.py --clang-completer --omnisharp-completer',
-      \ 'unix': 'python2 ./install.py --clang-completer --omnisharp-completer',
-    \ },
-  \ }
-  NeoBundle 'rdnetto/YCM-Generator'
-call neobundle#end()
-
 " YCM
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1

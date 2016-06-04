@@ -1,12 +1,3 @@
-call neobundle#append()
-  NeoBundle 'camelcasemotion'
-  NeoBundle 'tpope/vim-unimpaired'
-  NeoBundle 'tpope/vim-surround'
-  NeoBundle 'tpope/vim-repeat'
-  NeoBundle 'triglav/vim-visual-increment'
-  NeoBundle 'matchit.zip'
-call neobundle#end()
-
 " Number formats, for incrementing
 set nrformats=octal,hex
 

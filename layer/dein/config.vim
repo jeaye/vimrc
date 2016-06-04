@@ -8,13 +8,13 @@ if &runtimepath !~# '/dein.vim'
   exe 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
+let packages = split(globpath($HOME . "/.vim/layer", "**/package.vim"), "\n")
 if dein#load_state(s:dein_dir)
-  call dein#begin(expand('~/.vim/dein'))
+  call dein#begin(expand('~/.vim/dein'), packages)
     call dein#add('Shougo/dein.vim')
     call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
-    let files = globpath($HOME . "/.vim/layer", "**/package.vim")
-    for f in split(files, "\n")
+    for f in packages
       echom "Loading layer packages" f
       exe "source" f
     endfor

@@ -1,8 +1,3 @@
-call neobundle#append()
-  NeoBundle 'indenthtml.vim'
-  NeoBundle 'ntpeters/vim-better-whitespace'
-call neobundle#end()
-
 set autoindent smartindent
 set backspace=indent,eol,start
 

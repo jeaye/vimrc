@@ -1,9 +1,3 @@
-call neobundle#append()
-  NeoBundleLazy 'kovisoft/slimv', {
-    \ 'autoload' : { 'filetypes' : ['lisp'] },
-  \ }
-call neobundle#end()
-
 " Disable paredit
 let g:paredit_mode = 0
 let g:paredit_electric_return = 0

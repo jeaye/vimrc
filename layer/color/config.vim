@@ -1,11 +1,6 @@
 " Enable global syntax highlighting
 syntax on
 
-call neobundle#append()
-  NeoBundle 'altercation/vim-colors-solarized'
-  NeoBundle 'luochen1990/rainbow'
-call neobundle#end()
-
 set background=dark
 colorscheme solarized
 

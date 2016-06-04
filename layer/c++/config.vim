@@ -1,7 +1,3 @@
-call neobundle#append()
-  NeoBundle 'derekwyatt/vim-fswitch'
-call neobundle#end()
-
 nmap <silent> <c-z> :FSHere<cr>
 let fsnonewfiles="on"
 

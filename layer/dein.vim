@@ -8,6 +8,7 @@ if &runtimepath !~# '/dein.vim'
   exe 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
+" Register all packages across layers
 let packages = split(globpath($HOME . "/.vim/layer", "**/package.vim"), "\n")
 if dein#load_state(s:dein_dir)
   call dein#begin(expand('~/.vim/dein'), packages)
@@ -15,18 +16,19 @@ if dein#load_state(s:dein_dir)
     call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
     for f in packages
-      echom "Loading layer packages" f
       exe "source" f
     endfor
   call dein#end()
   call dein#save_state()
 endif
 
+" Install missing packages
 if has('vim_starting') && dein#check_install()
   let g:dein#install_process_timeout = 60 * 10
   call dein#install()
 endif
 
+" Load each layer's config
 let files = globpath($HOME . "/.vim/layer", "**/config.vim")
 for f in split(files, "\n")
   exe "source" f

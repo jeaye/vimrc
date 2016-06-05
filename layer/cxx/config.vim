@@ -1,4 +1,4 @@
-function! InitCXX()
+function! Init_cxx()
   nmap <silent> <c-z> :FSHere<cr>
   let fsnonewfiles="on"
 
@@ -12,3 +12,4 @@ function! InitCXX()
   endfunction
   autocmd BufNewFile *.{h,hpp} call s:insert_gates()
 endfunction!
+call SubscribeInit("cpp", "Init_cxx")

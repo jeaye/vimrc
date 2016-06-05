@@ -1,3 +1,5 @@
-autocmd FileType markdown set spell
-
-au BufRead,BufNewFile *.md setlocal textwidth=80
+function! Init_markdown()
+  set spell
+  setlocal textwidth=80
+endfunction!
+call SubscribeInit("markdown", "Init_markdown")

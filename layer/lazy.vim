@@ -8,7 +8,6 @@ endfunction!
 
 function! GuardedInit(filetype, func)
   if exists("g:subscribed_init_" . a:filetype)
-    echom "Already initialized filetype " . a:filetype
     return 0
   endif
   exe "call " . a:func . "()"

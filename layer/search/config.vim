@@ -10,6 +10,9 @@ set smartcase
 " Don't change cwd while I move around
 let g:ctrlp_working_path_mode = 'rw'
 
+" Use a faster matcher for CtrlP
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
 " Ignore certain patterns while searching
 set wildignore+=target,out,build_debug,build_release,build
 set wildignore+=Library,*.csproject,*.meta

@@ -14,6 +14,11 @@ nnoremap <C-h> :tabp<CR>
 nnoremap <silent> <C-j> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <C-k> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
+" Work around an issue with C-h on OS X
+if has('nvim')
+  nmap <BS> :tabp<CR>
+endif
+
 " Allow a lot of tabs to be opened by -p
 set tabpagemax=50
 

@@ -1,5 +1,5 @@
 call dein#add('fsharp/vim-fsharp', {
-      \ 'depends': 'scrooloose/syntastic',
+      \ 'depends': ['scrooloose/syntastic'],
       \ 'on_ft': ['fsharp'],
       \ 'build': 'make fsautocomplete',
 \ })

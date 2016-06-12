@@ -6,6 +6,7 @@ colorscheme solarized
 
 " Color conceal characters nicely
 hi Conceal guifg=green ctermfg=green
+set conceallevel=2
 
 " Rainbow operators
 let g:rainbow_active = 1

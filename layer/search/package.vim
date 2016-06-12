@@ -1,7 +1,7 @@
 " File finding
 call dein#add('ctrlpvim/ctrlp.vim', {
       \ 'on_map': { 'n': '<C-p>' },
-      \ 'hook_source': 'call InitCtrlP()',
+      \ 'hook_source': 'call Init_CtrlP()',
 \ })
 call dein#add('FelikZ/ctrlp-py-matcher', {
       \ 'on_func': 'pymatcher#PyMatch',

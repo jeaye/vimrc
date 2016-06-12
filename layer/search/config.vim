@@ -16,7 +16,7 @@ set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.key
 set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
 set wildignore+=*.vcxitems,*.xib,*.pbxproj,*.xcuserstate,*.props
 
-function! InitCtrlP()
+function! Init_CtrlP()
   " Don't change cwd while I move around
   let g:ctrlp_working_path_mode = 'rw'
 

@@ -16,19 +16,20 @@ set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.key
 set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
 set wildignore+=*.vcxitems,*.xib,*.pbxproj,*.xcuserstate,*.props
 
-""" CtrlP
-" Don't change cwd while I move around
-let g:ctrlp_working_path_mode = 'rw'
+function! InitCtrlP()
+  " Don't change cwd while I move around
+  let g:ctrlp_working_path_mode = 'rw'
 
-" Use a faster matcher for CtrlP
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+  " Use a faster matcher for CtrlP
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endfunction!
 
 """ Ag
 let g:ag_working_path_mode = "r"
-let g:ag_highlight = 0
 let g:ag_prg = expand('~/.vim/dein/repos/github.com/ggreer/the_silver_searcher/ag') . ' --vimgrep'
 let g:ag_mapping_message = 0
 
 " Disable terminal output of ag as it runs
 set shellpipe=>
+
 nnoremap <C-f> :Ag 

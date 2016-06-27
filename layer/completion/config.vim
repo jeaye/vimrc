@@ -1,9 +1,11 @@
 " YCM
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_error_symbol = '>>'
 let g:ycm_warning_symbol = ']]'
 let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_server_log_level = 'critical'
 nnoremap ,g :YcmCompleter GoToDeclaration <CR>
 nnoremap ,G :YcmCompleter GoToDefinition <CR>
 

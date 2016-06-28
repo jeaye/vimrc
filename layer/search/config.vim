@@ -33,3 +33,6 @@ let g:ag_mapping_message = 0
 set shellpipe=>
 
 nnoremap <C-f> :Ag 
+
+" Count word occurrences in a file
+map ,* *<C-O>:%s///gn<CR>

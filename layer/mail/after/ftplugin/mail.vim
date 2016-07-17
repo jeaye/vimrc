@@ -1,4 +1,3 @@
-echomsg "Init mail"
 setlocal spell
 setlocal wrap
 setlocal linebreak

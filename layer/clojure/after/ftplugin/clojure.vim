@@ -1,4 +1,3 @@
-echomsg "Clojure"
 " How many lines to consider for indentation correctness; it's large
 let g:clojure_maxlines = 10000
 

@@ -19,12 +19,9 @@ if dein#load_state(s:dein_dir)
       exe "source" f
     endfor
 
-    let layers = split(globpath("~/.vim/layer", "*"), "\n")
+    let layers = split(globpath("~/.vim/layer", "*/after"), "\n")
     for l in layers
-      if !empty(glob(l . "/after"))
-        echomsg l
-        exe "set rtp^=" . l . "/after"
-      endif
+      exe "set rtp+=" . l
     endfor
 
   call dein#end()

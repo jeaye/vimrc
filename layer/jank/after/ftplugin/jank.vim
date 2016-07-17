@@ -1,7 +1,3 @@
-function! Init_jank()
-endfunction!
-call SubscribeInit("jank", "Init_jank")
-
 " Keybindings for unicode chars
 inoremap <leader>l <C-v>u3bb<Space>
 inoremap <leader>f <C-v>u192<Space>

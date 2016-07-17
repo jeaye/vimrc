@@ -8,16 +8,25 @@ if &runtimepath !~# '/dein.vim'
   exe 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-" Register all packages across layers
-let packages = split(globpath($HOME . "/.vim/layer", "**/package.vim"), "\n")
+let configs = globpath("~/.vim/layer", "**/config.vim")
 if dein#load_state(s:dein_dir)
-  call dein#begin(expand('~/.vim/dein'), packages)
+  let packages = globpath("~/.vim/layer", "dein.vim,**/package.vim")
+  call dein#begin(expand('~/.vim/dein'), split(packages + configs, "\n"))
     call dein#add('Shougo/dein.vim')
     call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
 
-    for f in packages
+    for f in split(packages, "\n")
       exe "source" f
     endfor
+
+    let layers = split(globpath("~/.vim/layer", "*"), "\n")
+    for l in layers
+      if !empty(glob(l . "/after"))
+        echomsg l
+        exe "set rtp^=" . l . "/after"
+      endif
+    endfor
+
   call dein#end()
   call dein#save_state()
 endif
@@ -29,7 +38,6 @@ if has('vim_starting') && dein#check_install()
 endif
 
 " Load each layer's config
-let files = globpath($HOME . "/.vim/layer", "**/config.vim")
-for f in split(files, "\n")
+for f in split(configs, "\n")
   exe "source" f
 endfor

@@ -16,13 +16,11 @@ set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.key
 set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
 set wildignore+=*.vcxitems,*.xib,*.pbxproj,*.xcuserstate,*.props
 
-function! Init_CtrlP()
-  " Don't change cwd while I move around
-  let g:ctrlp_working_path_mode = 'rw'
+" Don't change cwd while I move around
+let g:ctrlp_working_path_mode = 'rw'
 
-  " Use a faster matcher for CtrlP
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-endfunction!
+" Use a faster matcher for CtrlP
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 """ Ag
 let g:ag_working_path_mode = "r"

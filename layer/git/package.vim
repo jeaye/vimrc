@@ -1,2 +1,2 @@
-call dein#add('tpope/vim-fugitive')
-call dein#add('chrisbra/vim-diff-enhanced')
+Plug 'tpope/vim-fugitive'
+Plug 'chrisbra/vim-diff-enhanced'

@@ -1,2 +1,2 @@
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('luochen1990/rainbow')
+Plug 'altercation/vim-colors-solarized'
+Plug 'luochen1990/rainbow'

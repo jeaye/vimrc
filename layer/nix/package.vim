@@ -1,1 +1,1 @@
-call dein#add('LnL7/vim-nix')
+Plug 'LnL7/vim-nix'

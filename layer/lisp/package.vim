@@ -1,3 +1,3 @@
-call dein#add('kovisoft/slimv', {
-  \ 'on_ft' : ['lisp'],
-\ })
+Plug 'kovisoft/slimv', {
+  \ 'for' : ['lisp'],
+\ }

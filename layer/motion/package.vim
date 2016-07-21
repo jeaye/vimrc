@@ -1,6 +1,6 @@
-call dein#add('camelcasemotion')
-call dein#add('tpope/vim-unimpaired')
-call dein#add('tpope/vim-surround')
-call dein#add('tpope/vim-repeat')
-call dein#add('triglav/vim-visual-increment')
-call dein#add('matchit.zip')
+Plug 'camelcasemotion'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'triglav/vim-visual-increment'
+Plug 'matchit.zip'

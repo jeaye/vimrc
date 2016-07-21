@@ -1,2 +1,2 @@
-call dein#add('indenthtml.vim')
-call dein#add('ntpeters/vim-better-whitespace')
+Plug 'indenthtml.vim'
+Plug 'ntpeters/vim-better-whitespace'

@@ -1,3 +1,3 @@
-call dein#add('chrisbra/CheckAttach', {
-  \ 'on_ft': ['mail'],
-\ })
+Plug 'chrisbra/CheckAttach', {
+  \ 'for': ['mail'],
+\ }

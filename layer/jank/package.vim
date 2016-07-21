@@ -1,1 +1,1 @@
-call dein#local("~/projects/jank", {}, ["vim", "after"])
+Plug '~/projects/jank', { 'rtp': 'vim' }

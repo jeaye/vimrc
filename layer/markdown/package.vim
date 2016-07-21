@@ -1,7 +1,5 @@
-" Markdown dep
-call dein#add('godlygeek/tabular', {
-      \ 'on_ft' : ['markdown'],
-\ })
-call dein#add('plasticboy/vim-markdown', {
-      \ 'on_ft' : ['markdown'],
-\ })
+Plug 'godlygeek/tabular', {
+      \ 'for' : ['markdown'],
+\ } | Plug 'plasticboy/vim-markdown', {
+      \ 'for' : ['markdown'],
+\ }

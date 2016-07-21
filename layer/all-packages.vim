@@ -1,7 +1,5 @@
 let packages = globpath("~/.vim/layer", "**/package.vim")
 call plug#begin('~/.vim/plugged')
-  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-
   for f in split(packages, "\n")
     exe "source" f
   endfor

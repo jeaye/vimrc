@@ -14,7 +14,7 @@ let g:rainbow_conf =
 \ {
 \  'guifgs': ['darkorange3', 'seagreen3', 'deepskyblue', 'darkorchid3', 'forestgreen', 'lightblue', 'hotpink', 'mistyrose1'],
 \  'ctermfgs': ['darkgreen', 'cyan', 'lightgreen', 'lightred'],
-\  'operators': '_[\,\+\*\-\&\^\!\.\:\<\>\;\=\|\?]_',
+\  'operators': '_[\,\+\*\-\&\^\!\.\<\>\;\=\|\?]_',
 \  'parentheses':
 \  [
 \    'start=/(/ end=/)/ fold',

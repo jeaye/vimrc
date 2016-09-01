@@ -11,6 +11,3 @@ Plug 'tpope/vim-salve', {
 Plug 'tpope/vim-fireplace', {
       \ 'for': ['clojure'],
 \ }
-Plug 'venantius/vim-cljfmt', {
-      \ 'for': ['clojure'],
-\ }

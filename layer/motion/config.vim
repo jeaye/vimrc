@@ -5,6 +5,9 @@ set nrformats=octal,hex
 set ttimeout
 set ttimeoutlen=100
 
+" Highlight the current line
+set cursorline
+
 " Go to file in a new tab
 nnoremap gF <C-W>gF
 

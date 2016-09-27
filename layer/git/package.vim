@@ -1,2 +1,2 @@
-Plug 'tpope/vim-fugitive', { 'on': [ 'Gblame', 'Ghistory', 'Gdiff', 'Glog', 'Gedit' ] }
+Plug 'tpope/vim-fugitive'
 Plug 'chrisbra/vim-diff-enhanced', { 'for': 'diff' }

@@ -24,6 +24,6 @@ noremap <buffer> <silent> 0 g0
 noremap <buffer> <silent> $ g$
 
 " Try not to use escape
-inoremap <Esc> <nop>
+"inoremap <Esc> <nop>
 inoremap jk <Esc>
 inoremap kj <Esc>

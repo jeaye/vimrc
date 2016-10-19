@@ -1,6 +1,6 @@
-Plug 'paredit.vim', {
-      \ 'for': ['clojure'],
-\ }
+"Plug 'paredit.vim', {
+"      \ 'for': ['clojure'],
+"\ }
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-salve', {
       \ 'for': ['clojure'],

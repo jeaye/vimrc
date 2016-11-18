@@ -15,6 +15,12 @@ nnoremap gF <C-W>gF
 nnoremap ,d "_d
 vnoremap ,d "_d
 
+" Paste from the yank buffer
+nnoremap ,p "0p
+vnoremap ,p "0p
+nnoremap ,P "0P
+vnoremap ,P "0P
+
 nnoremap Y y$
 
 " Delete comment character(s) when joining commented lines

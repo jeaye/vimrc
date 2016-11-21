@@ -7,6 +7,9 @@ set showcmd
 " Show command completion with tab
 set wildmenu
 
+" Draw more judiciously
+set lazyredraw
+
 " GUI tabs
 nnoremap ,t <Esc>:tabnew<CR>
 nnoremap <C-l> :tabn<CR>

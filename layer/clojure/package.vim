@@ -14,3 +14,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people', {
 Plug 'tpope/vim-fireplace', {
       \ 'for': ['clojure'],
 \ }
+
+autocmd BufNewFile,BufRead *.boot setfiletype clojure
+autocmd BufNewFile,BufRead *.edn setfiletype clojure

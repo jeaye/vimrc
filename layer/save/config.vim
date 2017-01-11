@@ -2,6 +2,8 @@
 set autoread
 
 set noswapfile
+set nobackup
+set nowritebackup
 set directory=/tmp
 
 " Don't unload abandoned buffers

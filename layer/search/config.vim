@@ -11,16 +11,36 @@ set smartcase
 set wildignore+=target,out,build_debug,build_release,build
 set wildignore+=Library,*.csproject,*.meta
 set wildignore+=_site,vendor
-set wildignore+=*.o,*.d,*.a,*.c3b,*.ccz,Resource,*.jar,*.strings,*.plist,*.xml,*.filters
+set wildignore+=*.o,*.d,*.a,*.c3b,*.ccz,Resource,*.jar,*.strings,*.plist,*.filters
 set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.keystore
 set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
-set wildignore+=*.vcxitems,*.xib,*.pbxproj,*.xcuserstate,*.props
+set wildignore+=*.vcxitems,*.xib,*.nib,*.pbxproj,*.xcuserstate,*.props
+set wildignore+=*.apk,*.iml
+set wildignore+=*.ogg,*.wav,*.mp3,*.mid,*.png,*.jpg,*.jpeg
 
+""" CtrlP
 " Don't change cwd while I move around
 let g:ctrlp_working_path_mode = 'rw'
 
+" Don't limit results as much
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:20'
+let g:ctrlp_max_files = 0
+let g:ctrlp_max_depth = 100
+
+" Allow easy opening of multiple files in tabs
+let g:ctrlp_open_multiple_files = 't'
+
+" Follow symlinks, but don't loop
+let g:ctrlp_follow_symlinks = 1
+
+" Only update after typing has stopped for some ms
+let g:ctrlp_lazy_update = 250
+
 " Use a faster matcher for CtrlP
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+" Keep file cache between sessions
+let g:ctrlp_clear_cache_on_exit = 0
 
 """ Ag
 let g:ag_working_path_mode = "r"

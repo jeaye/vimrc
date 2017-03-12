@@ -8,5 +8,3 @@ let g:clojure_align_multiline_strings = 1
 "autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 
 nnoremap cq% :%Eval<CR>
-
-command! Arcadia VimShellInteractive ruby Assets/Arcadia/Editor/repl-client.rb

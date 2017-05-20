@@ -10,7 +10,7 @@ set smartcase
 " Ignore certain patterns while searching
 set wildignore+=target,out,build_debug,build_release,build
 set wildignore+=Library,*.csproject,*.meta
-set wildignore+=_site,vendor
+set wildignore+=_site,vendor,node_modules
 set wildignore+=*.o,*.d,*.a,*.c3b,*.ccz,Resource,*.jar,*.strings,*.plist,*.filters
 set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.keystore
 set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework

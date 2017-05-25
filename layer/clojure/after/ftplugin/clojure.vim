@@ -7,4 +7,6 @@ let g:clojure_align_multiline_strings = 1
 " Evaluate Clojure buffers on load
 "autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 
-nnoremap cq% :%Eval<CR>
+nnoremap cq% :%Eval<CR>:Last!<CR>
+
+nmap cpo :silent! execute "normal \<Plug>FireplaceCountPrint"<CR>:Last!<CR>

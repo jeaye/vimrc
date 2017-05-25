@@ -1,8 +1,5 @@
 " Enable global syntax highlighting
-syntax on
-
-set background=dark
-colorscheme solarized
+"syntax on
 
 " Color conceal characters nicely
 hi Conceal guifg=green ctermfg=green
@@ -34,3 +31,18 @@ let g:rainbow_conf =
 \    },
 \  }
 \}
+
+" Add a hook to patch the colorscheme
+function! FixColorscheme()
+  hi Pmenu guibg=#eee8d5 guifg=#586e75 gui=none
+  hi PmenuSel guibg=#859900 guifg=#586e75 gui=none
+endfunction
+
+augroup fix_colorscheme
+  au!
+  au ColorScheme * call FixColorscheme()
+augroup END
+
+" Set colorscheme and trigger hook
+set background=dark
+colorscheme solarized

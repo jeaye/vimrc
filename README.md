@@ -1,6 +1,6 @@
 vimrc
 ===
-This is my vim configuration for both Linux and OS X. It's built around C++ and
+This is my vim configuration for both Linux and MacOS. It's built around C++ and
 Clojure development, primarily.
 
 ## Installation

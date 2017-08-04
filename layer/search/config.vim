@@ -42,15 +42,17 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " Keep file cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0
 
-""" Ag
-let g:ag_working_path_mode = "r"
-let g:ag_prg = expand('~/.vim/plugged/the_silver_searcher/ag') . ' --vimgrep'
-let g:ag_mapping_message = 0
+""" Ack/Ag
+let g:ackprg = expand('~/.vim/plugged/the_silver_searcher/ag') . ' --smart-case --vimgrep'
+
+" Don't jump to first result
+cnoreabbrev Ag Ack!
+let g:ackhighlight = 0
 
 " Disable terminal output of ag as it runs
 set shellpipe=>
 
-nnoremap <C-f> :Ag 
+nnoremap <C-f> :Ack! 
 
 " Count word occurrences in a file
 map ,* *<C-O>:%s///gn<CR>

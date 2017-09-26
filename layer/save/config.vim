@@ -1,5 +1,11 @@
 " Automatically reload files from disk
 set autoread
+if has('nvim')
+  " NeoVim doesn't check for changed files automatically. For now, hack it in.
+  " This only works with a GUI though.
+  " https://github.com/neovim/neovim/issues/1936
+  au FocusGained * :checktime
+endif
 
 set noswapfile
 set nobackup

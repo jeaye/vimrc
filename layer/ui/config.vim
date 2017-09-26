@@ -52,7 +52,11 @@ nnoremap <right> <nop>
 " Font
 let os = substitute(system('uname'), "\n", "", "")
 if os != "Darwin"
-  set guifont=Monospace\ 17
+  if has('nvim')
+    exec "Guifont Monospace:h17"
+  else
+    set guifont=Monospace\ 17
+  endif
 else
   set guifont=Menlo\ Regular:h25
 endif

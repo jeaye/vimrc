@@ -98,10 +98,10 @@ let &colorcolumn="81,81"
 " quickfix buffer without having to manually switch back.
 au BufReadPost quickfix noremap <C-cr> <cr><c-w>p
 
-if has('nvim')
-  " Allow escaping terminal mode with ESC
-  :tnoremap <Esc> <C-\><C-n>
-endif
+" Allow escaping terminal mode with ESC.
+tnoremap <Esc> <C-\><C-n>
+" Make terminal windows as big as possible.
+au BufWinEnter * if &buftype == 'terminal' | exec "resize " . &lines | endif
 
 " Open help in a new tab
 cabbrev help tab help

@@ -17,3 +17,15 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 " menuone: show even when there is a single option
 " preview: show extra info in the preview window
 set completeopt=menuone,menu,preview
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['eslint']

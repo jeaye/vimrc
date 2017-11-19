@@ -7,7 +7,7 @@ build_commands="rm -f CMakeCache.txt && cmake . && make install"
 if [ $(which nixos-version 2>/dev/null) ];
 then
   # NixOS
-  nix-shell -p cmake lua ncurses zlib gcc --run "$build_commands"
+  nix-shell --pure -p cmake lua ncurses zlib gcc --run "$build_commands"
 else
   # Normal Unix-likes
   $build_commands

@@ -1,6 +1,6 @@
 if !has('nvim')
   Plug 'jeaye/color_coded', {
-    \ 'do': 'rm -f CMakeCache.txt && cmake . && make install',
+    \ 'do': '../../build/color_coded',
   \ }
 endif
 Plug 'derekwyatt/vim-fswitch', {

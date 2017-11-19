@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+build_deps="gcc"
+build_commands="./build.sh"
+
+"$here./do_build" "$build_deps" "$build_commands"

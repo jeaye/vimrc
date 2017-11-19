@@ -1,5 +1,5 @@
 Plug 'Valloric/YouCompleteMe', {
-  \ 'do': './install.py --clang-completer --system-libclang',
+  \ 'do': '../../build/ycm',
 \ }
 "call dein#add('rdnetto/YCM-Generator')
 

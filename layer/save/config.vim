@@ -12,6 +12,13 @@ set nobackup
 set nowritebackup
 set directory=/tmp
 
+" Persist undo history.
+if !isdirectory($HOME . "/.vim-undo")
+  call mkdir($HOME . "/.vim-undo", "", 0700)
+endif
+set undodir=~/.vim-undo
+set undofile
+
 " Don't unload abandoned buffers
 set hidden
 

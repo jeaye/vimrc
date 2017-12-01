@@ -5,4 +5,4 @@ here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 build_deps="cmake lua ncurses zlib gcc"
 build_commands="rm -f CMakeCache.txt && cmake . && make install"
 
-"$here/do_build" "$build_deps" "$build_commands"
+"$here/do-build" "$build_deps" "$build_commands"

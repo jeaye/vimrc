@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+deps="$1"
+build_commands="$2"
+
+if [ $(which nixos-version 2>/dev/null) ];
+then
+  # NixOS
+  nix-shell --pure -p $deps --run "$build_commands"
+else
+  # Normal Unix-likes
+  eval $build_commands
+fi

@@ -3,4 +3,4 @@ command Signature :normal! i
       \Jeaye<CR>
       \<CR>
       \Be a part of OkLetsPlay! Sign up at https://okletsplay.com<CR>
-      \Join our Telegram at http://t.me/letsbetcoin<CR><ESC>
+      \Join the LetsBetCoin Telegram at http://t.me/letsbetcoin<CR><ESC>

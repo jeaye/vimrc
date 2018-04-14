@@ -1,5 +1,5 @@
 function! MakeDiaryLink()
-  return "~/vimwiki/diary/" . strftime('%Y-%m-%d')
+  return "~/vimwiki/diary/" . strftime('%Y-%m-%d') . ".md"
 endfunction
 
 nmap <Leader>ww :e ~/vimwiki/index.md<CR>

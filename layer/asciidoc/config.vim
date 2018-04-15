@@ -16,8 +16,8 @@ function! AsciidocEnableSyntaxRanges()
 endfunction
 
 augroup asciidocSyntaxRanges
-    autocmd!
-    autocmd Filetype asciidoc call AsciidocEnableSyntaxRanges()
+  autocmd!
+  autocmd Filetype asciidoc call AsciidocEnableSyntaxRanges()
 augroup END
 
 function! AsciidocFollowLink()
@@ -42,5 +42,8 @@ ruby <<EOF
 EOF
 endfunction
 
-" Enter on a line with a relative link will follow the link.
-nmap <silent> <CR> :call AsciidocFollowLink()<CR>
+augroup asciidocLinkFollowing
+  autocmd!
+  " Enter on a line with a relative link will follow the link.
+  autocmd Filetype asciidoc nmap <silent> <CR> :call AsciidocFollowLink()<CR>
+augroup END

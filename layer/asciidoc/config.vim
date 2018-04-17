@@ -1,3 +1,6 @@
+" Force wrapping.
+set textwidth=80
+
 " Source: http://blog.ciplogic.com/index.php/blog/95-vim-asciidoc-or-markdown-source-code-blocks-highlight
 
 function! AsciidocEnableSyntaxRanges()

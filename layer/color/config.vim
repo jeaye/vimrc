@@ -46,11 +46,6 @@ augroup END
 " Set colorscheme and trigger hook
 set background=dark
 
-if has('nvim')
-  let g:neosolarized_bold = 1
-  let g:neosolarized_underline = 1
-  let g:neosolarized_italic = 1
-  colorscheme NeoSolarized
-else
-  colorscheme solarized
-endif
+let g:gruvbox_italic=0
+let g:gruvbox_contrast_dark='medium'
+colorscheme gruvbox

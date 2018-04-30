@@ -45,5 +45,5 @@ endfunction
 augroup asciidocLinkFollowing
   autocmd!
   " Enter on a line with a relative link will follow the link.
-  autocmd Filetype asciidoc nmap <silent> <CR> :call AsciidocFollowLink()<CR>
+  autocmd Filetype asciidoc nmap <silent> <buffer> <CR> :call AsciidocFollowLink()<CR>
 augroup END

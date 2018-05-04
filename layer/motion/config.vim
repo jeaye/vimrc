@@ -27,10 +27,10 @@ nnoremap Y y$
 set formatoptions+=j
 
 " Move based on display lines
-noremap <buffer> <silent> k gk
-noremap <buffer> <silent> j gj
-noremap <buffer> <silent> 0 g0
-noremap <buffer> <silent> $ g$
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
 
 " Try not to use escape
 inoremap jk <Esc>

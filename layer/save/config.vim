@@ -48,11 +48,13 @@ augroup resCur
 augroup END
 
 " Allow saving as root
-command! W w !sudo tee % > /dev/null
+command! Wsudo w !sudo tee % > /dev/null
 
 " Common typos
+command! W w
 command! Wa wa
 command! Wq wq
+command! Wqa wqa
 
 " Make the proper directories when writing a file
 function! s:MkNonExDir(file, buf)

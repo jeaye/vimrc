@@ -39,6 +39,9 @@ let g:ctrlp_lazy_update = 250
 " Use a faster matcher for CtrlP
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
+" Ignore files in .gitignore
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
 " Keep file cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0
 

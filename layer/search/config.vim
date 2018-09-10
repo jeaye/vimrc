@@ -40,7 +40,7 @@ let g:ctrlp_lazy_update = 250
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files . -co --exclude-standard; for submodule in $(git submodule status | sed "s/[ +]\S\+ \(\S\+\).*/\1/"); do cd "$submodule"; git ls-files . -co --exclude-standard | sed "s#^#$submodule/#"; cd "$OLDPWD"; done', 'find %s -type f']
 
 " Keep file cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0

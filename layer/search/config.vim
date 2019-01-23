@@ -45,6 +45,11 @@ let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files . -co --exclude-standar
 " Keep file cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0
 
+let g:ctrlp_extensions = ['line']
+
+" Fuzzy find in the current file
+nnoremap <C-t> :execute 'CtrlPLine ' . (expand('%'))<CR>
+
 """ Ack/Ag
 let g:ackprg = expand('~/.vim/plugged/the_silver_searcher/ag') . ' --smart-case --vimgrep'
 
@@ -59,3 +64,6 @@ nnoremap <C-f> :Ack!
 
 " Count word occurrences in a file
 map ,* *<C-O>:%s///gn<CR>
+
+" Use tags, when present
+set tags+=tags;$HOME

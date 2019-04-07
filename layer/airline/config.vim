@@ -13,6 +13,7 @@ let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_tab_count = 0
 
 " Don't let just anyone take over the statusline
 let g:airline_extensions = ['tabline', 'ctrlp', 'wordcount']

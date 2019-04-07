@@ -1,5 +1,7 @@
-Plug 'Valloric/YouCompleteMe', {
-  \ 'do': '../../build/ycm',
-\ }
+"Plug 'Valloric/YouCompleteMe', {
+"  \ 'do': '../../build/ycm',
+"\ }
+"
+"Plug 'vim-syntastic/syntastic'
 
-Plug 'vim-syntastic/syntastic'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}

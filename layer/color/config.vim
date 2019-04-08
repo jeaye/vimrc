@@ -43,6 +43,13 @@ augroup fix_colorscheme
   au ColorScheme * call FixColorscheme()
 augroup END
 
+augroup custom_todo
+  au!
+  au Syntax * syn match CustomTodo /\v<(TODO|XXX|TIME):/
+        \ containedin=.*Comment
+augroup END
+hi def link CustomTodo Todo
+
 " Set colorscheme and trigger hook
 set background=dark
 

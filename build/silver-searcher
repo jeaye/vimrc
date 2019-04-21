@@ -2,7 +2,7 @@
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-build_deps="gcc automake"
+build_deps="gcc automake autoconf"
 build_commands="./build.sh"
 
 "$here/do-build" "$build_deps" "$build_commands"

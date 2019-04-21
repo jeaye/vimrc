@@ -2,6 +2,7 @@
 set nocompatible
 
 let g:hostname = substitute(system('hostname'), "\n", "", "")
+let g:is_nixos = system('uname -a') =~ "NixOS"
 let g:lightweight = g:hostname == "nixums"
 let g:python3_host_prog='/usr/bin/python'
 

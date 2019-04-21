@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-build_deps="gcc automake autoconf pcre"
-build_commands="./build.sh"
-
-"$here/do-build" "$build_deps" "$build_commands"

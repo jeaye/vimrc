@@ -51,7 +51,11 @@ let g:ctrlp_extensions = ['line']
 nnoremap <C-t> :execute 'CtrlPLine ' . (expand('%'))<CR>
 
 """ Ack/Ag
-let g:ackprg = expand('~/.vim/plugged/the_silver_searcher/ag') . ' --smart-case --vimgrep'
+if g:is_nixos
+  let g:ackprg = 'ag --smart-case --vimgrep'
+else
+  let g:ackprg = expand('~/.vim/plugged/the_silver_searcher/ag') . ' --smart-case --vimgrep'
+endif
 
 " Don't jump to first result
 cnoreabbrev Ag Ack!

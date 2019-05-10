@@ -20,7 +20,6 @@ Follow the normal Vim installation, but also add the following links.
 mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim ${XDG_CONFIG_HOME:=$HOME/.config}/nvim
 ln -s ~/.vimrc ${XDG_CONFIG_HOME:=$HOME/.config}/nvim/init.vim
-ln -s ~/.vim/ginit.vim ${XDG_CONFIG_HOME:=$HOME/.config}/nvim/ginit.vim
 ```
 
 ## Installing and updating packages

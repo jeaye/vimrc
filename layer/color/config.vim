@@ -55,4 +55,4 @@ set background=dark
 
 let g:gruvbox_italic=0
 let g:gruvbox_contrast_dark='medium'
-colorscheme gruvbox
+silent! colorscheme gruvbox

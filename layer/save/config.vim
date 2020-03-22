@@ -48,7 +48,7 @@ augroup resCur
 augroup END
 
 " Allow saving as root
-command! Wsudo w !sudo tee % > /dev/null
+command! Wsudo w !sudo -S tee % > /dev/null
 
 " Common typos
 command! W w

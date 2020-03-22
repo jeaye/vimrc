@@ -4,4 +4,4 @@
 "
 "Plug 'vim-syntastic/syntastic'
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}

@@ -8,6 +8,9 @@ set ttimeoutlen=100
 " Highlight the current line
 set cursorline
 
+" Ignore full page jumps, since I accidentally hit it when wanting C-v.
+nnoremap <C-b> <Nop>
+
 " Go to file in a new tab
 nnoremap gF <C-W>gF
 

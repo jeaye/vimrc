@@ -91,16 +91,17 @@ endif
 set updatetime=1000
 
 " 80 column
-let &colorcolumn="81,81"
+let &colorcolumn="101,101"
 
 " Enter in the quickfix window doesn't focus the new buffer.
 " This is convenient for quickly looking at code and following the
 " quickfix buffer without having to manually switch back.
 au BufReadPost quickfix noremap <C-cr> <cr><c-w>p
 
-" Allow escaping terminal mode with ESC.
-tnoremap <Esc> <C-\><C-n>
+" Allow escaping terminal mode.
+tnoremap <C-Esc> <C-\><C-n>
 " Make terminal windows as big as possible.
+set scrollback=100000
 au BufWinEnter * if &buftype == 'terminal' | exec "resize " . &lines | endif
 
 " Open help in a new tab

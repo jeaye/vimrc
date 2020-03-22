@@ -42,5 +42,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+let g:coc_global_extensions = [ 'coc-conjure', 'coc-rls', 'coc-omnisharp' ]
+
 " Rename the current word.
 nmap <leader>rn <Plug>(coc-rename)

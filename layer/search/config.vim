@@ -37,7 +37,11 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_lazy_update = 250
 
 " Use a faster matcher for CtrlP
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+if !has('python')
+  echo 'In order to use pymatcher plugin, you need +python compiled vim'
+else
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+endif
 
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files . -co --exclude-standard; for submodule in $(git submodule status | sed "s/[ +]\S\+ \(\S\+\).*/\1/"); do cd "$submodule"; git ls-files . -co --exclude-standard | sed "s#^#$submodule/#"; cd "$OLDPWD"; done', 'find %s -type f']

@@ -33,9 +33,6 @@ let g:ctrlp_open_multiple_files = 't'
 " Follow symlinks, but don't loop
 let g:ctrlp_follow_symlinks = 1
 
-" Only update after typing has stopped for some ms
-let g:ctrlp_lazy_update = 250
-
 " Use a faster matcher for CtrlP
 if !has('python')
   echo 'In order to use pymatcher plugin, you need +python compiled vim'

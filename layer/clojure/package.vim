@@ -4,8 +4,8 @@ Plug 'guns/vim-sexp', {
 Plug 'tpope/vim-sexp-mappings-for-regular-people', {
       \ 'for': ['clojure'],
 \ }
-"Plug 'tpope/vim-fireplace'
-Plug 'Olical/conjure', { 'tag': 'v2.1.2', 'do': 'bin/compile'  }
 
-autocmd BufNewFile,BufRead *.boot setfiletype clojure
-autocmd BufNewFile,BufRead *.edn setfiletype clojure
+" These are needed at boot, due to Fennel compilation.
+Plug 'Olical/conjure', { 'tag': 'v3.5.0' }
+Plug 'Olical/aniseed'
+Plug 'bakpakin/fennel.vim'

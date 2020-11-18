@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.sp set filetype=c
+au BufRead,BufNewFile *.sp,*.sph set filetype=c

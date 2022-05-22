@@ -5,7 +5,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people', {
       \ 'for': ['clojure'],
 \ }
 
-" These are needed at boot, due to Fennel compilation.
-Plug 'Olical/conjure', { 'tag': 'v3.5.0' }
-Plug 'Olical/aniseed'
-Plug 'bakpakin/fennel.vim'
+Plug 'Olical/conjure', { 'tag': 'v4.33.1' }
+" Easily view JVM class files.
+Plug 'udalov/javap-vim'

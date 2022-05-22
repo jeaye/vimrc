@@ -1,7 +1,5 @@
-"Plug 'Valloric/YouCompleteMe', {
-"  \ 'do': '../../build/ycm',
-"\ }
-"
-"Plug 'vim-syntastic/syntastic'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+" Autocompletion plugin
+Plug 'hrsh7th/nvim-cmp'
+" LSP source for nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'

@@ -13,7 +13,7 @@ set wildignore+=Library,*.csproject,*.meta
 set wildignore+=_site,vendor,node_modules
 set wildignore+=*.o,*.d,*.a,*.c3b,*.ccz,Resource,*.jar,*.strings,*.plist,*.filters
 set wildignore+=*.xcscheme,*.xcworkspacedata,*.xcscmblueprint,*.properties,*.keystore
-set wildignore+=boost_*,googletest,*.proto,protobuf,*.txt,Frameworks,*.framework
+set wildignore+=boost_*,googletest,protobuf,*.txt,Frameworks,*.framework
 set wildignore+=*.vcxitems,*.xib,*.nib,*.pbxproj,*.xcuserstate,*.props
 set wildignore+=*.apk,*.iml
 set wildignore+=*.ogg,*.wav,*.mp3,*.mid,*.png,*.jpg,*.jpeg
@@ -34,14 +34,14 @@ let g:ctrlp_open_multiple_files = 't'
 let g:ctrlp_follow_symlinks = 1
 
 " Use a faster matcher for CtrlP
-if !has('python')
+if !has('python') && !has('python3')
   echo 'In order to use pymatcher plugin, you need +python compiled vim'
 else
   let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 endif
 
 " Ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files . -co --exclude-standard; for submodule in $(git submodule status | sed "s/[ +]\S\+ \(\S\+\).*/\1/"); do cd "$submodule"; git ls-files . -co --exclude-standard | sed "s#^#$submodule/#"; cd "$OLDPWD"; done', 'find %s -type f']
+let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files . -co --exclude-standard; for submodule in $(git submodule status | rev | cut -d" " -f2 | rev); do cd "$submodule"; git ls-files . -co --exclude-standard | sed "s#^#$submodule/#"; cd "$OLDPWD"; done', 'find %s -type f']
 
 " Keep file cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0

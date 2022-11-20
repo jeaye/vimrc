@@ -16,7 +16,7 @@ set statusline+=%*
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 lua << EOF
--- require'lspconfig'.clojure_lsp.setup{}
+require('lspconfig').clojure_lsp.setup{}
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -52,7 +52,7 @@ local on_attach = function(client, bufnr)
 end
 
 local lspconfig = require('lspconfig')
-lspconfig.ccls.setup {
+lspconfig.clangd.setup {
   capabilities = capabilities,
   on_attach = on_attach,
   init_options = {
@@ -65,6 +65,21 @@ lspconfig.ccls.setup {
     };
   }
 }
+
+-- ccls was less reliable than clangd.
+--lspconfig.ccls.setup {
+--  capabilities = capabilities,
+--  on_attach = on_attach,
+--  init_options = {
+--    compilationDatabaseDirectory = "build";
+--    index = {
+--      threads = 0;
+--    };
+--    clang = {
+--      excludeArgs = {};
+--    };
+--  }
+--}
 
 -- nvim-cmp setup
 local cmp = require('cmp')
@@ -109,3 +124,11 @@ cmp.setup {
   },
 }
 EOF
+
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+let g:ale_linters = {
+\  'javascript': ['vim-lsp', 'eslint'],
+\  'sh': ['vim-lsp', 'shellcheck'],
+\}
+let g:ale_c_build_dir_names = ["build"]

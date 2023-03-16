@@ -19,8 +19,7 @@ lua << EOF
 require('lspconfig').clojure_lsp.setup{}
 
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -132,3 +131,4 @@ let g:ale_linters = {
 \  'sh': ['vim-lsp', 'shellcheck'],
 \}
 let g:ale_c_build_dir_names = ["build"]
+let g:ale_sh_shellcheck_options = '-o all'

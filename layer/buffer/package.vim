@@ -1,1 +1,0 @@
-Plug 'simnalamburt/vim-mundo'

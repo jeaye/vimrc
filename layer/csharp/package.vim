@@ -1,1 +1,0 @@
-Plug 'OmniSharp/omnisharp-vim'

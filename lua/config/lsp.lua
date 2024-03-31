@@ -18,7 +18,8 @@ vim.cmd([[
 
   " Only run linters named in ale_linters settings.
   let g:ale_linters_explicit = 1
-  let g:ale_linters = { 'javascript': ['vim-lsp', 'eslint'], 'sh': ['vim-lsp', 'shellcheck'], }
+  " A markdown linter I sometimes use: 'vale'
+  let g:ale_linters = { 'javascript': ['vim-lsp', 'eslint'], 'sh': ['vim-lsp', 'shellcheck'], 'markdown': [] }
   let g:ale_c_build_dir_names = ["build"]
   let g:ale_sh_shellcheck_options = '-o all'
 ]])

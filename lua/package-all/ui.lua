@@ -1,3 +1,47 @@
+function get_collapsed_navic_location()
+    local navic = require("nvim-navic")
+    local old_data = navic.get_data()
+    local new_data = {}
+    local cur_ns = nil
+    local ns_comps = {}
+
+    for _, comp in ipairs(old_data) do
+        if comp.type == "Namespace" then
+            cur_ns = comp
+            table.insert(ns_comps, comp.name)
+        else
+            -- On the first non-namespace component $c$, collect
+            -- previous NS components into a single one and
+            -- insert it in front of $c$.
+            if cur_ns ~= nil then
+                -- Concatenate name and insert
+                local num_comps = #ns_comps
+                local comb_name = ""
+                for idx = 1, num_comps do
+                    local ns_name = ns_comps[idx]
+
+                    -- No "::" in front of first component
+                    local join = (idx == 1) and "" or "::"
+
+                    if idx ~= num_comps then
+                        comb_name = comb_name .. join .. ns_name:sub(1, 1)
+                    else
+                        comb_name = comb_name .. join .. ns_name
+                    end
+                end
+
+                cur_ns.name = comb_name
+                table.insert(new_data, cur_ns)
+                cur_ns = nil
+            end
+
+            table.insert(new_data, comp)
+        end
+    end
+
+    return navic.format_data(new_data)
+end
+
 return {
   -- Better `vim.notify()`
   {
@@ -103,7 +147,7 @@ return {
         },
         sections = {
           lualine_a = { "mode" },
-          lualine_b = { "branch" },
+          lualine_b = { },
           lualine_c = {
             {
               "diagnostics",
@@ -114,46 +158,19 @@ return {
                 hint = icons.diagnostics.Hint,
               },
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
             { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
             -- stylua: ignore
             {
               function() return require("nvim-navic").get_location() end,
+              --get_collapsed_navic_location,
               cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
             },
           },
           lualine_x = {
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.command.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-              color = fg("Statement")
-            },
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.mode.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-              color = fg("Constant") ,
-            },
-            { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
-            {
-              "diff",
-              symbols = {
-                added = icons.git.added,
-                modified = icons.git.modified,
-                removed = icons.git.removed,
-              },
-            },
+            { "filetype", icon_only = false, separator = "", },
           },
-          lualine_y = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
-            { "location", padding = { left = 0, right = 1 } },
-          },
-          lualine_z = {
-            function()
-              return " " .. os.date("%R")
-            end,
-          },
+          lualine_y = { "progress" },
+          lualine_z = { "location" },
         },
         extensions = { "neo-tree" },
       }
@@ -229,19 +246,47 @@ return {
     "SmiteshP/nvim-navic",
     lazy = true,
     init = function()
-      vim.g.navic_silence = true
-      --require("config.util").on_attach(function(client, buffer)
-      --  if client.server_capabilities.documentSymbolProvider then
-      --    require("nvim-navic").attach(client, buffer)
-      --  end
-      --end)
+      --vim.g.navic_silence = true
+      require("config.util").on_attach(function(client, buffer)
+        if client.server_capabilities.documentSymbolProvider then
+          require("nvim-navic").attach(client, buffer)
+        end
+      end)
     end,
     opts = function()
       return {
-        separator = " ",
-        highlight = true,
+        separator = "::",
+        highlight = false,
         depth_limit = 5,
-        icons = require("config").icons.kinds,
+        --icons = require("config").icons.kinds,
+        icons = {
+          File          = "",
+          Module        = "",
+          Namespace     = "",
+          Package       = "",
+          Class         = "",
+          Method        = "",
+          Property      = "",
+          Field         = "",
+          Constructor   = "",
+          Enum          = "",
+          Interface     = "",
+          Function      = "",
+          Variable      = "",
+          Constant      = "",
+          String        = "",
+          Number        = "",
+          Boolean       = "",
+          Array         = "",
+          Object        = "",
+          Key           = "",
+          Null          = "",
+          EnumMember    = "",
+          Struct        = "",
+          Event         = "",
+          Operator      = "",
+          TypeParameter = "",
+        },
       }
     end,
   },

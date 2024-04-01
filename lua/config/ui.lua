@@ -5,6 +5,8 @@ opt.conceallevel = 2
 
 -- Improves speed of drawing and smoothness of scrolling
 opt.ttyfast = true
+-- Noice cannot have this be true
+opt.lazyredraw = false
 
 vim.cmd([[
 hi Conceal guifg=green ctermfg=green
@@ -55,8 +57,8 @@ set number
 set noshowmode
 
 " Folding
-set foldmethod=syntax
-set foldenable
+set foldmethod=indent
+set nofoldenable
 set foldcolumn=0
 set foldlevelstart=20
 
@@ -71,6 +73,7 @@ set updatetime=1000
 
 " 80 column
 let &colorcolumn="101,101"
+set synmaxcol=128
 
 " Enter in the quickfix window doesn't focus the new buffer.
 " This is convenient for quickly looking at code and following the

@@ -57,6 +57,8 @@ return {
       },
       clojure_lsp = {},
       clangd = {},
+      tsserver = {},
+      eslint = {},
     },
     config = function()
       require('lspconfig').clojure_lsp.setup{}
@@ -106,6 +108,20 @@ return {
             excludeArgs = {};
           };
         }
+      }
+
+      lspconfig.tsserver.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+        cmd = { "typescript-language-server", "--stdio" }
+      }
+
+      lspconfig.eslint.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "javascript" },
+        cmd = { "vscode-eslint-language-server", "--stdio" },
       }
     end
   },

@@ -1,0 +1,1 @@
+/Users/jeaye/.vim/lua/package-all/d2.lua

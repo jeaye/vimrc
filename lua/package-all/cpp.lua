@@ -11,5 +11,8 @@ return {
       vim.g.fsnonewfiles = "on"
       vim.g.c_no_curly_error = 1
     end
+  },
+  {
+    "octol/vim-cpp-enhanced-highlight"
   }
 }

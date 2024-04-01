@@ -21,14 +21,13 @@ return {
     version = false, -- telescope did only one release, so use HEAD for now
     keys = {
       { "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
-      { "<leader>/", util.telescope("live_grep"), desc = "Find in Files (Grep)" },
+      --{ "<leader>/", util.telescope("live_grep"), desc = "Find in Files (Grep)" },
+      { "<leader>/", "<cmd>Telescope live_grep<CR>", desc = "Find in Files (Grep)" },
       { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
-      { "<leader><space>", util.telescope("files"), desc = "Find Files (root dir)" },
       -- find
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-      { "<C-p>", util.telescope("files"), desc = "Find Files (root dir)" },
-      { "<leader>ff", util.telescope("files"), desc = "Find Files (root dir)" },
-      { "<leader>fF", util.telescope("files", { cwd = false }), desc = "Find Files (cwd)" },
+      --{ "<C-p>", util.telescope("files"), desc = "Find Files (root dir)" },
+      { "<C-p>", "<cmd>Telescope find_files<CR>", desc = "Find Files (root dir)" },
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
       -- git
       { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },

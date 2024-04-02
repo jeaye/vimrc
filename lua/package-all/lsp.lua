@@ -59,8 +59,6 @@ return {
       clangd = {},
     },
     config = function()
-      require('lspconfig').clojure_lsp.setup{}
-
       -- Add additional capabilities supported by nvim-cmp
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -107,6 +105,12 @@ return {
           };
         }
       }
+
+      lspconfig.clojure_lsp.setup{
+        capabilities = capabilities,
+        on_attach = on_attach
+      }
+
     end
   },
   {

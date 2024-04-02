@@ -61,8 +61,6 @@ return {
       eslint = {},
     },
     config = function()
-      require('lspconfig').clojure_lsp.setup{}
-
       -- Add additional capabilities supported by nvim-cmp
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -123,6 +121,12 @@ return {
         filetypes = { "javascript" },
         cmd = { "vscode-eslint-language-server", "--stdio" },
       }
+
+      lspconfig.clojure_lsp.setup{
+        capabilities = capabilities,
+        on_attach = on_attach
+      }
+
     end
   },
   {

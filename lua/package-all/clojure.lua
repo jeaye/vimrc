@@ -4,8 +4,8 @@ return {
     dependencies = { "guns/vim-sexp" },
     ft = "clojure",
   },
-  { "Olical/conjure", tag = "v4.41.0", ft = "clojure" },
+  { "Olical/conjure", tag = "v4.52.1", ft = "clojure" },
 	-- Easily view JVM class files.
 	--{ "udalov/javap-vim", ft = "java" },
-  { "vim-scripts/JavaDecompiler.vim" },
+  --{ "vim-scripts/JavaDecompiler.vim" },
 }

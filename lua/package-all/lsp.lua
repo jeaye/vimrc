@@ -57,6 +57,8 @@ return {
       },
       --clojure_lsp = {},
       clangd = {},
+      tsserver = {},
+      eslint = {},
     },
     config = function()
       -- Add additional capabilities supported by nvim-cmp
@@ -106,10 +108,24 @@ return {
         }
       }
 
-      --lspconfig.clojure_lsp.setup{
-      --  capabilities = capabilities,
-      --  on_attach = on_attach
-      --}
+      lspconfig.tsserver.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+        cmd = { "typescript-language-server", "--stdio" }
+      }
+
+      lspconfig.eslint.setup {
+        on_attach = on_attach,
+        capabilities = capabilities,
+        filetypes = { "javascript" },
+        cmd = { "vscode-eslint-language-server", "--stdio" },
+      }
+
+      lspconfig.clojure_lsp.setup{
+        capabilities = capabilities,
+        on_attach = on_attach
+      }
 
     end
   },
@@ -165,6 +181,7 @@ return {
           { name = "luasnip" },
           { name = "buffer" },
           { name = "path" },
+          { name = "copilot" },
         }),
         formatting = {
           format = function(_, item)

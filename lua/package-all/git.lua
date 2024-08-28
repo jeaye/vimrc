@@ -1,5 +1,7 @@
 return {
-  "tpope/vim-fugitive"
+  {
+    "tpope/vim-fugitive"
+  }
   --{
   --  "TimUntersberger/neogit",
   --  dependencies =

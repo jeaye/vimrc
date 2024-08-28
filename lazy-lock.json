@@ -1,4 +1,5 @@
 {
+  "LargeFile": { "branch": "master", "commit": "3941a37b2b0288524300348a39521a46539bf9f6" },
   "ack.vim": { "branch": "master", "commit": "36e40f9ec91bdbf6f1adf408522a73a6925c3042" },
   "ale": { "branch": "master", "commit": "954682108d21b412561fb32e3fa766c7ee539984" },
   "bufferline.nvim": { "branch": "main", "commit": "0b2fd861eee7595015b6561dade52fb060be10c4" },
@@ -7,6 +8,7 @@
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conjure": { "branch": "master", "commit": "a81977726f726b21d4bd75cea5bbbb7022005507" },
+  "d2-vim": { "branch": "master", "commit": "981c87dccb63df2887cc41b96e84bf550f736c57" },
   "dressing.nvim": { "branch": "master", "commit": "c5775a888adbc50652cb370073fcfec963eca93e" },
   "ebnf.vim": { "branch": "master", "commit": "f3e5ba3fee6a07493afd9c4b805f11fca1c14edd" },
   "follow-md-links.nvim": { "branch": "main", "commit": "caa85cad973c5e612662d04b55e07eefc88f1d6b" },

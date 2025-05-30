@@ -9,8 +9,21 @@ return {
       --  set background=light
       --  set nocursorline
       --]])
-      --vim.opt.scrolloff = 0
+      vim.opt.scrolloff = 0
       vim.cmd.colorscheme("gruvbox")
     end
   },
+  --{
+  --  "catppuccin/nvim",
+  --  name = "catppuccin",
+  --  priority = 1000,
+  --  config = function()
+  --    vim.cmd([[
+  --      "autocmd ColorScheme * highlight Normal guibg=#FFFFFF
+  --      set background=light
+  --      set nocursorline
+  --    ]])
+  --    --vim.cmd.colorscheme("catppuccin")
+  --  end
+  --}
 }

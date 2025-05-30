@@ -56,12 +56,6 @@ set number
 " Don't show the current mode - it's already displayed by airline
 set noshowmode
 
-" Folding
-set foldmethod=indent
-set nofoldenable
-set foldcolumn=0
-set foldlevelstart=20
-
 " UTF8 please
 if has('vim_starting')
   set fileencoding=utf-8
@@ -88,3 +82,16 @@ if has('nvim')
   au BufWinEnter * if &buftype == 'terminal' | exec "resize " . &lines | endif
 endif
 ]])
+
+-- UFO folding
+-- vim.o.foldcolumn = "1" -- '0' is not bad
+-- vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+-- vim.o.foldlevelstart = 99
+-- vim.o.foldenable = false
+-- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+
+-- Normal folding
+--vim.o.foldcolumn = "0"
+--vim.wo.foldmethod = 'expr'
+--vim.o.foldlevelstart = 1
+--vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'

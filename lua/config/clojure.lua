@@ -9,7 +9,7 @@ vim.cmd([[
 
   " Detect which bodies to indent, rather than hang.
   let g:clojure_fuzzy_indent = 1
-  let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^box', '^h-box', '^v-box', '^fn\*']
+  let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^box', '^h-box', '^v-box', '^fn\*', '^when-']
 
   " Conjure options.
   let g:conjure_log_direction = "horizontal"

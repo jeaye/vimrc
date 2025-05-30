@@ -1,3 +1,31 @@
+local fold_text_handler = function(virtText, lnum, endLnum, width, truncate)
+    local newVirtText = {}
+    local suffix = (' 󰁂 %d lines '):format(endLnum - lnum)
+    local sufWidth = vim.fn.strdisplaywidth(suffix)
+    local targetWidth = width - sufWidth
+    local curWidth = 0
+    for _, chunk in ipairs(virtText) do
+        local chunkText = chunk[1]
+        local chunkWidth = vim.fn.strdisplaywidth(chunkText)
+        if targetWidth > curWidth + chunkWidth then
+            table.insert(newVirtText, chunk)
+        else
+            chunkText = truncate(chunkText, targetWidth - curWidth)
+            local hlGroup = chunk[2]
+            table.insert(newVirtText, {chunkText, hlGroup})
+            chunkWidth = vim.fn.strdisplaywidth(chunkText)
+            -- str width returned from truncate() may less than 2nd argument, need padding
+            if curWidth + chunkWidth < targetWidth then
+                suffix = suffix .. (' '):rep(targetWidth - curWidth - chunkWidth)
+            end
+            break
+        end
+        curWidth = curWidth + chunkWidth
+    end
+    table.insert(newVirtText, {suffix, 'MoreMsg'})
+    return newVirtText
+end
+
 return {
   -- Better `vim.notify()`
   {
@@ -13,6 +41,7 @@ return {
     },
     opts = {
       timeout = 3000,
+      background_colour = "#000000",
       max_height = function()
         return math.floor(vim.o.lines * 0.33)
       end,
@@ -263,4 +292,57 @@ return {
 
   -- ui components
   { "MunifTanjim/nui.nvim", lazy = true },
+
+  -- Doesn't properly detect the headings to fold. Maybe it's tripped up
+  -- by some of the things I have.
+  --{ "masukomi/vim-markdown-folding" },
+
+  -- UFO folding
+  -- Collapses pretty well, but gets into buggy states where I can't leave normal
+  -- mode without it collapsing everything again. Very tough to get working for
+  -- only markdown.
+  --{
+  --  "kevinhwang91/nvim-ufo",
+  --  lazy = false,
+  --  dependencies = {
+  --    "kevinhwang91/promise-async",
+  --    {
+  --      "luukvbaal/statuscol.nvim",
+  --      config = function()
+  --        local builtin = require("statuscol.builtin")
+  --        require("statuscol").setup({
+  --          relculright = true,
+  --          ft_ignore = { "NeogitStatus", "c", "cpp" },
+  --          segments = {
+  --            { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
+  --            { text = { "%s" }, click = "v:lua.ScSa" },
+  --            { text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
+  --          },
+  --        })
+  --      end,
+  --    },
+  --  },
+  --  event = "BufReadPost",
+  --  opts = {
+  --    provider_selector = function()
+  --      return { "treesitter", "indent" }
+  --    end,
+  --    fold_virt_text_handler = fold_text_handler
+  --  },
+
+  --  init = function()
+  --    vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+  --    vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+  --    vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
+
+  --    vim.api.nvim_create_autocmd('FileType', {
+  --      pattern = { 'NeogitStatus', "c", "cpp" },
+  --      callback = function()
+  --        require('ufo').detach()
+  --        vim.opt_local.foldenable = false
+  --        vim.opt_local.foldcolumn = '0'
+  --      end,
+  --    })
+  --  end,
+  --},
 }

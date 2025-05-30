@@ -12,13 +12,14 @@ return {
             \ 'exe': 'clang-format',
             \ 'args': ['-assume-filename=' . expand('"%"')],
             \ 'stdin': 1,
-            \ 'env': ['PATH=/home/jeaye/projects/jank/compiler+runtime/build/llvm-install/usr/local/bin:$PATH'],
             \ }
 
         augroup fmt
           autocmd!
           autocmd BufWritePre * undojoin | Neoformat
         augroup END
+
+        command NeoformatDisable execute 'let g:neoformat_enabled_cpp = []'
       ]])
     end
   },

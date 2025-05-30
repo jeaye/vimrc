@@ -20,3 +20,4 @@ for _, v in pairs(vim.api.nvim_get_runtime_file("lua/config/*", true)) do
 end
 
 require("lazy").setup("package")
+--require("lazy").setup("no-packages")

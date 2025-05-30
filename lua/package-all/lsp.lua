@@ -56,8 +56,12 @@ return {
         },
       },
       --clojure_lsp = {},
-      clangd = {},
-      tsserver = {},
+      clangd = {
+        -- Use system clangd, not one from mason.
+        -- https://discourse.nixos.org/t/clang-clang-and-clangd-cant-find-headers-even-with-compile-commands-json/54657/2
+        mason = false,
+      },
+      --tsserver = {},
       eslint = {},
     },
     config = function()
@@ -108,12 +112,12 @@ return {
         }
       }
 
-      lspconfig.tsserver.setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-        cmd = { "typescript-language-server", "--stdio" }
-      }
+      --lspconfig.tsserver.setup {
+      --  on_attach = on_attach,
+      --  capabilities = capabilities,
+      --  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+      --  cmd = { "typescript-language-server", "--stdio" }
+      --}
 
       lspconfig.eslint.setup {
         on_attach = on_attach,

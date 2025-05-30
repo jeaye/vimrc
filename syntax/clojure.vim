@@ -1,0 +1,1 @@
+/home/jeaye/.vim/syntax/jank.vim

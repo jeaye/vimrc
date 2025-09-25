@@ -19,6 +19,7 @@ return {
           autocmd BufWritePre * undojoin | Neoformat
         augroup END
 
+        command NeoformatEnable execute 'let g:neoformat_enabled_cpp = ["clangformat"]'
         command NeoformatDisable execute 'let g:neoformat_enabled_cpp = []'
       ]])
     end

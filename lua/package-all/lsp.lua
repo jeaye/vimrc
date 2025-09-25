@@ -99,6 +99,7 @@ return {
 
       local lspconfig = require('lspconfig')
       lspconfig.clangd.setup {
+        cmd = { "clangd", "--clang-tidy", "--background-index", "--header-insertion=never", "--log=error" },
         capabilities = capabilities,
         on_attach = on_attach,
         init_options = {

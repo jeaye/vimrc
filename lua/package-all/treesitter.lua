@@ -1,7 +1,8 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    version = false, -- last release is way too old and doesn't work on Windows
+    branch = 'master',
+    lazy = false,
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
@@ -54,7 +55,6 @@ return {
         "cmake",
         "cpp",
         "clojure",
-        "help",
         "html",
         "javascript",
         "json",

@@ -97,11 +97,11 @@ return {
         vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
       end
 
-      local lspconfig = require('lspconfig')
-      lspconfig.clangd.setup {
+      vim.lsp.config('clangd', {
         cmd = { "clangd", "--clang-tidy", "--background-index", "--header-insertion=never", "--log=error" },
         capabilities = capabilities,
         on_attach = on_attach,
+        filetypes = { 'c', 'cpp' },
         init_options = {
           compilationDatabaseDirectory = "build";
           index = {
@@ -111,26 +111,28 @@ return {
             excludeArgs = {};
           };
         }
-      }
+      })
+      vim.lsp.enable('clangd')
 
-      --lspconfig.tsserver.setup {
+      --vim.lsp.config.tsserver.setup {
       --  on_attach = on_attach,
       --  capabilities = capabilities,
       --  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
       --  cmd = { "typescript-language-server", "--stdio" }
       --}
 
-      lspconfig.eslint.setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        filetypes = { "javascript" },
-        cmd = { "vscode-eslint-language-server", "--stdio" },
-      }
+      --vim.lsp.config.eslint.setup {
+      --  on_attach = on_attach,
+      --  capabilities = capabilities,
+      --  filetypes = { "javascript" },
+      --  cmd = { "vscode-eslint-language-server", "--stdio" },
+      --}
 
-      lspconfig.clojure_lsp.setup{
+      vim.lsp.config('clojure_lsp', {
         capabilities = capabilities,
         on_attach = on_attach
-      }
+      })
+      vim.lsp.enable('clojure_lsp')
 
     end
   },
